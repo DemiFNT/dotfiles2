@@ -27,20 +27,29 @@ format-background = #00FF00
 ### Broken Path Theme ###
 background-panel = #1e2022 
 background = #37355c
+background-2 = #23434a
 foreground = #ede4e4
 foreground-alt = #044a37
 foreground-alt2 = #c1cf06
 foreground-alt3 = #066355
-foreground-alt4 = #0e9e89
+foreground-alt4 = #00ba8c
 volume-bar = #02baae
-indicator = #04b0a5
-arrow0 = #03ada2
+indicator = #008279 
+arrow0 = #02b0a4
 arrow1 = #02968d
 arrow2 = #01857c
 arrow3 = #00736b
-arrow4 = #44826f
-;cpubar = #2ca381 
-;rambar = #2ca381
+arrow4 = #00615a
+arrow5 = #00524e
+cpubar = #f78da8
+arch = #51b9f5
+widget = #bacfd6
+widget2 = #43484d
+wlan = #ffff91 
+volume = #ffb300
+battery = #00e897 
+rambar = #eb8adc
+time = #ff295b
 
 ################################################################################
 ################################################################################
@@ -50,7 +59,7 @@ arrow4 = #44826f
 
 [bar/mainbar-bspwm]
 width = 100%
-height = 20
+height = 24
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -71,26 +80,26 @@ enable-ipc = true
 
 border-left-size = 0
 border-right-size = 0
-border-top-size = 0
-border-bottom-size = 2
-border-color = #99000000
+border-top-size = 6
+border-bottom-size = 6
+border-color = #1e2022
 
-padding-left = 1
+padding-left = 2
 padding-right = 2
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
-font-0 = Iosevka Nerd Font:size=10;3
-font-1 = Iosevka Nerd Font:style=Medium:size=11;3
-font-2 = Iosevka Nerd Font:style=Medium:size=14;3
-font-3 = Font Awesome 5 Free Solid:size=10;3
-font-4 = Font Awesome 5 Free Solid:size=11;3
-font-6 = Font Awesome 5 Free Solid:size=8;3
+;font-0 = Iosevka Nerd Font:style=Regular:size=10;3
+font-0 = Typicons:style=Regular:size=9;3
+font-1 = Iosevka Nerd Font:style=Medium:size=10;3
+font-2 = Iosevka Nerd Font:style=Medium:size=13;3
+font-3 = Iosevka Nerd Font:style=Medium:size=11;3
+font-4 = Font Awesome 5 Free:style=Solid:size=9;3
 
-modules-left = bspwm 
-modules-center = 
-modules-right = arrow1 wlan2 arrow2 battery2 arrow3 volume2 arrow4 arch-aur-updates time
+modules-left = cpu3 memory3 
+modules-center = bspwm2
+modules-right = wlan4 battery4 volume4 arch-aur-updates3 time3
 
 tray-detached = falsetray-offset-x = 0
 tray-offset-y = 0
@@ -114,32 +123,63 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;ﳟ
 
 format = <label-state>
-label-active = 
+label-focused = %icon%
 label-occupied = %icon%
-label-urgent = %icon%
 label-empty = %icon%
+label-focused-font = 2
+label-occupied-font = 2
+label-empty-font = 2
 
 label-occupied-padding = 2
 label-empty-padding = 2
-label-urgent-padding = 2
-label-active-padding = 2
+label-focused-padding = 2
 
-label-active-foreground = ${colors.indicator}
-label-urgent-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.foreground}
 label-empty-foreground = ${colors.foreground}
 label-occupied-foreground = ${colors.foreground}
 
-label-active-background = ${colors.background-panel}
-label-urgent-background = ${colors.background-panel}
+label-focused-background = ${colors.indicator}
 label-empty-background = ${colors.background-panel}
 label-occupied-background = ${colors.background-panel}
 
+[module/bspwm2]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;ﳟ
+
+format = <label-state>
+label-focused = %icon%
+label-occupied = %icon%
+label-empty = %icon%
+label-focused-font = 2
+label-occupied-font = 2
+label-empty-font = 2
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-focused-padding = 2
+
+label-focused-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.foreground}
+label-occupied-foreground = ${colors.foreground}
+
+label-focused-background = ${colors.indicator}
+label-empty-background = ${colors.widget2}
+label-occupied-background = ${colors.widget2}
 
 ################################################################################
 ############                       MODULES ARROWS                   ############
@@ -148,7 +188,7 @@ label-occupied-background = ${colors.background-panel}
 
 [module/arrow0]
 type = custom/text
-content = "%{T3} %{T-}"
+content = "%{T3} %{T-}"
 content-foreground = ${colors.arrow0}
 content-background = ${colors.background-panel}
 
@@ -173,8 +213,14 @@ content-background = ${colors.arrow2}
 [module/arrow4]
 type = custom/text
 content = "%{T3} %{T-}"
-content-foreground = ${colors.background-panel}
+content-foreground = ${colors.arrow4}
 content-background = ${colors.arrow3}
+
+[module/arrow5]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow5}
+content-background = ${colors.arrow4}
 
 ################################################################################
 ################################################################################
@@ -285,6 +331,86 @@ animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 1000
 animation-charing-font = 1
 
+[module/battery3]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging><label-charging>
+label-charging = "  %percentage%%  "
+label-charging-foreground = ${colors.background-panel}
+label-charging-background = ${colors.widget}
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = "  %percentage%%  "
+label-discharging-foreground = ${colors.background-panel}
+label-discharging-background = ${colors.widget}
+
+ramp-capacity-0 = "    "
+ramp-capacity-1 = "    "
+ramp-capacity-2 = "    "
+ramp-capacity-3 = "    "
+ramp-capacity-4 = "    "
+ramp-capacity-5 = "    "
+ramp-capacity-6 = "    "
+ramp-capacity-7 = "    "
+ramp-capacity-8 = "    "
+ramp-capacity-9 = "    "
+ramp-capacity-foreground = ${colors.background-panel}
+ramp-capacity-background = ${colors.battery}
+ramp-capacity-font = 1
+
+animation-charging-0 = "    "
+animation-charging-1 = "    "
+animation-charging-2 = "    "
+animation-charging-3 = "    "
+animation-charging-4 = "    "
+animation-charging-foreground = ${colors.background-panel}
+animation-charging-background = ${colors.battery}
+animation-charging-framerate = 1000
+animation-charing-font = 1
+
+[module/battery4]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging><label-charging>
+label-charging = " %percentage%% "
+label-charging-foreground = ${colors.foreground}
+label-charging-background = ${colors.widget2}
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = " %percentage%%  "
+label-discharging-foreground = ${colors.foreground}
+label-discharging-background = ${colors.widget2}
+
+ramp-capacity-0 = "   "
+ramp-capacity-1 = "   "
+ramp-capacity-2 = "   "
+ramp-capacity-3 = "   "
+ramp-capacity-4 = "   "
+ramp-capacity-5 = "   "
+ramp-capacity-6 = "   "
+ramp-capacity-7 = "   "
+ramp-capacity-8 = "   "
+ramp-capacity-9 = "   "
+ramp-capacity-foreground = ${colors.battery}
+ramp-capacity-background = ${colors.widget2}
+ramp-capacity-font = 1
+
+animation-charging-0 = "   "
+animation-charging-1 = "   "
+animation-charging-2 = "   "
+animation-charging-3 = "   "
+animation-charging-4 = "   "
+animation-charging-foreground = ${colors.battery}
+animation-charging-background = ${colors.widget2}
+animation-charging-framerate = 1000
+animation-charing-font = 1
+
 ################################################################################
 
 [module/cpu]
@@ -303,10 +429,10 @@ bar-load-foreground-0 = ${colors.cpubar}
 bar-load-foreground-1 = ${colors.cpubar}
 bar-load-foreground-2 = ${colors.cpubar}
 bar-load-foreground-3 = ${colors.cpubar}
-;bar-load-background-0 = ${colors.cpubar}
-;bar-load-background-1 = ${colors.cpubar}
-;bar-load-background-2 = ${colors.cpubar}
-;bar-load-background-3 = ${colors.cpubar}
+bar-load-background-0 = ${colors.widget}
+bar-load-background-1 = ${colors.widget}
+bar-load-background-2 = ${colors.widget}
+bar-load-background-3 = ${colors.widget}
 bar-load-fill = ▍
 bar-load-empty = ▍
 bar-load-empty-foreground = ${colors.background}
@@ -315,10 +441,25 @@ bar-load-empty-foreground = ${colors.background}
 type = internal/cpu
 interval = 1
 
-format = <label>
-label = "  %percentage:%% "
-format-foreground = ${colors.background}
-format-background = ${colors.arrow0}
+format-prefix = "    "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.cpubar}
+format-prefix-font = 5
+label = "  %percentage:%%  "
+label-foreground = ${colors.background}
+label-background = ${colors.widget}
+
+[module/cpu3]
+type = internal/cpu
+interval = 1
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.cpubar}
+format-prefix-background = ${colors.widget2}
+format-prefix-font = 5
+label = " %percentage:%%  "
+label-foreground = ${colors.foreground}
+label-background = ${colors.widget2}
 
 ################################################################################
 
@@ -337,11 +478,36 @@ type = internal/date
 interval = 5
 time = "%H:%M"
 format-foreground = ${colors.foreground}
-format-background = ${colors.background-panel}
-label = " %time%"
+format-background = ${colors.arrow5}
+label = " %time%  "
 format-prefix = " "
 format-prefix-font = 1
-format-prefix-foreground = ${colors.foreground-alt4}
+format-prefix-foreground = ${colors.foreground}
+
+[module/time2]
+type = internal/date
+interval = 5
+time = "%H:%M"
+label-foreground = ${colors.background-panel}
+label-background = ${colors.widget}
+label = "  %time%  "
+format-prefix = "    "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.background-panel}
+format-prefix-background = ${colors.time}
+
+[module/time3]
+type = internal/date
+interval = 5
+time = "%H:%M"
+label-foreground = ${colors.foreground}
+label-background = ${colors.widget2}
+label = " %time%  "
+format-prefix = "   "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.time}
+format-prefix-background = ${colors.widget2}
+
 
 ################################################################################
 
@@ -368,12 +534,26 @@ bar-used-empty-foreground = ${colors.foreground}
 type = internal/memory
 interval = 1
 
-label = " %percentage_used:1%%"
-label-prefix-font = 4
-format = <label>
-format-label-prefix = "  "
+format-prefix = "    "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.rambar}
+format-prefix-font = 5
+label = "  %percentage_used:1%%  "
+label-foreground = ${colors.background}
+label-background = ${colors.widget} 
+
+[module/memory3]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+
+format-prefix = "    "
+format-prefix-foreground = ${colors.rambar}
+format-prefix-background = ${colors.widget2}
+format-prefix-font = 5
+label = "%percentage_used:1%%  "
 label-foreground = ${colors.foreground}
-label-background = ${colors.arrow1} 
+label-background = ${colors.widget2} 
 
 ################################################################################
 
@@ -479,7 +659,7 @@ ramp-volume-2-foreground = ${colors.foreground}
 ramp-volume-2-background = ${colors.arrow3}
 
 [module/volume2]
-type = internal/alsa
+type = internal/pulseaudio
 
 format-volume =<label-volume><bar-volume>
 label-volume = "  "
@@ -491,7 +671,7 @@ format-muted-prefix = " 婢 "
 format-muted-prefix-font = 1
 format-muted-prefix-foreground = ${colors.foreground}
 format-muted-prefixbackground = ${colors.arrow3}
-label-muted = "┉┉┉┉┉┉┉┉┉┉┉"
+label-muted = "┉┉┉┉┉┉┉┉┉┉"
 format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.arrow3}
 
@@ -526,6 +706,82 @@ bar-volume-fill-font = 2
 
 bar-volume-empty = ┉
 bar-volume-empty-foreground = ${colors.background}
+
+[module/volume3]
+type = internal/alsa
+format-volume =<ramp-volume><label-volume>
+label-volume = "  %percentage%%  "
+label-volume-foreground = ${colors.background-panel}
+label-volume-background = ${colors.widget}
+format-muted-prefix = "  婢  "
+format-muted-prefix-foreground = ${colors.background-panel}
+format-muted-prefix-background = ${colors.volume}
+format-muted-prefix-font = 5
+label-muted = "  0%  "
+label-muted-foreground = ${colors.background-panel}
+label-muted-background = ${colors.widget}
+
+ramp-volume-0 = "    "
+ramp-volume-1 = "    "
+ramp-volume-2 = "    "
+ramp-volume-3 = "    "
+ramp-volume-4 = "    "
+ramp-volume-5 = "    "
+ramp-volume-6 = "    "
+ramp-volume-font = 5
+
+ramp-volume-0-foreground = ${colors.background-panel}
+ramp-volume-0-background = ${colors.volume}
+ramp-volume-1-foreground = ${colors.background-panel}
+ramp-volume-1-background = ${colors.volume}
+ramp-volume-2-foreground = ${colors.background-panel}
+ramp-volume-2-background = ${colors.volume}
+ramp-volume-3-foreground = ${colors.background-panel}
+ramp-volume-3-background = ${colors.volume}
+ramp-volume-4-foreground = ${colors.background-panel}
+ramp-volume-4-background = ${colors.volume}
+ramp-volume-5-foreground = ${colors.background-panel}
+ramp-volume-5-background = ${colors.volume}
+ramp-volume-6-foreground = ${colors.background-panel}
+ramp-volume-6-background = ${colors.volume}
+
+[module/volume4]
+type = internal/pulseaudio
+format-volume =<ramp-volume><label-volume>
+label-volume = " %percentage%%  "
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.widget2}
+format-muted-prefix = "  婢 "
+format-muted-prefix-foreground = ${colors.volume}
+format-muted-prefix-background = ${colors.widget2}
+format-muted-prefix-font = 5
+label-muted = " 0%  "
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.widget2}
+
+ramp-volume-0 = "   "
+ramp-volume-1 = "   "
+ramp-volume-2 = "   "
+ramp-volume-3 = "   "
+ramp-volume-4 = "   "
+ramp-volume-5 = "   "
+ramp-volume-6 = "   "
+ramp-volume-font = 5
+
+ramp-volume-0-foreground = ${colors.volume}
+ramp-volume-0-background = ${colors.widget2}
+ramp-volume-1-foreground = ${colors.volume}
+ramp-volume-1-background = ${colors.widget2}
+ramp-volume-2-foreground = ${colors.volume}
+ramp-volume-2-background = ${colors.widget2}
+ramp-volume-3-foreground = ${colors.volume}
+ramp-volume-3-background = ${colors.widget2}
+ramp-volume-4-foreground = ${colors.volume}
+ramp-volume-4-background = ${colors.widget2}
+ramp-volume-5-foreground = ${colors.volume}
+ramp-volume-5-background = ${colors.widget2}
+ramp-volume-6-foreground = ${colors.volume}
+ramp-volume-6-background = ${colors.widget2}
 
 ################################################################################
 
@@ -603,7 +859,7 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-label-connected = " %{A1:networkmanager_dmenu:} %{A} "
+label-connected = " %{A1:networkmanager_dmenu:} %{A}"
 ;label-connected = "%signal%%"
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.arrow1}
@@ -618,6 +874,50 @@ format-disconnected-prefix-background = ${colors.arrow1}
 format-disconnected-prefix-font = 1
 format-disconnected-foreground = ${colors.foreground}
 format-disconnected-background = ${colors.arrow1}
+
+[module/wlan3]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = "  %{A1:networkmanager_dmenu:} %{A} "
+format-connected-prefix-foreground = ${colors.background-panel}
+format-connected-prefix-background = ${colors.wlan}
+format-connected-prefix-font = 5
+label-connected = "  %signal%%  "
+format-connected-foreground = ${colors.background-panel}
+format-connected-background = ${colors.widget}
+label-connected-font = 1
+
+format-disconnected-prefix = "  %{A1:networkmanager_dmenu:}ﮊ%{A}  "
+label-disconnected = "  %{A1:networkmanager_dmenu:}disconnected%{A}  "
+format-disconnected-prefix-foreground = ${colors.background-panel}
+format-disconnected-prefix-background = ${colors.wlan}
+format-disconnected-prefix-font = 5
+format-disconnected-foreground = ${colors.background-panel}
+format-disconnected-background = ${colors.widget}
+
+[module/wlan4]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = "  %{A1:networkmanager_dmenu:} %{A}"
+format-connected-prefix-foreground = ${colors.wlan}
+format-connected-prefix-background = ${colors.widget2}
+format-connected-prefix-font = 5
+label-connected = " %signal%%  "
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.widget2}
+label-connected-font = 1
+
+format-disconnected-prefix = "  %{A1:networkmanager_dmenu:}ﮊ%{A} "
+label-disconnected = " %{A1:networkmanager_dmenu:}disconnected%{A}  "
+format-disconnected-prefix-foreground = ${colors.wlan}
+format-disconnected-prefix-background = ${colors.widget2}
+format-disconnected-prefix-font = 5
+format-disconnected-foreground = ${colors.foreground}
+format-disconnected-background = ${colors.widget2}
 
 ################################################################################
 
@@ -654,13 +954,40 @@ menu-0-2-exec = shutdown now
 type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 600
-label = "%output% "
+label = "%output%"
 format-prefix = "  "
 format-prefix-font = 1
-format-prefix-foreground = ${colors.foreground-alt4}
-format-prefix-background = ${colors.background-panel}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.arrow4}
 format-foreground = ${colors.foreground}
-format-background = ${colors.background-panel}
+format-background = ${colors.arrow4}
+
+[module/arch-aur-updates2]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 600
+label = "  %output%  "
+format-prefix = "    "
+format-prefix-font = 2
+format-prefix-foreground = ${colors.background-panel}
+format-prefix-background = ${colors.arch}
+format-foreground = ${colors.background-panel}
+format-background = ${colors.widget}
+label-font = 1
+
+[module/arch-aur-updates3]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 600
+label = " %output%  "
+format-prefix = "   "
+format-prefix-font = 2
+format-prefix-foreground = ${colors.arch}
+format-prefix-background = ${colors.widget2}
+format-foreground = ${colors.foreground}
+format-background = ${colors.widget2}
+label-font = 1
+
 
 ################################################################################
 
