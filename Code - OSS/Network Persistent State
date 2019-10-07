@@ -1,0 +1,1 @@
+{"net":{"http_server_properties":{"servers":[{"https://dlasagno.gallery.vsassets.io":{"supports_spdy":true}},{"https://dlasagno.gallerycdn.vsassets.io":{"supports_spdy":true}},{"https://pkief.gallery.vsassets.io":{"supports_spdy":true}},{"https://pkief.gallerycdn.vsassets.io":{"supports_spdy":true}},{"https://marketplace.visualstudio.com":{"supports_spdy":true}}],"version":5}}}

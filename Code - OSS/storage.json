@@ -1,8 +1,12 @@
 {
     "telemetry.machineId": "775de81d00b466d768a3aef5ca2ceab5ac4550e40375f29e969420dac598b356",
     "openedPathsList": {
-        "workspaces3": [],
-        "files2": []
+        "workspaces3": [
+            "file:///home/demifnt/Downloads"
+        ],
+        "files2": [
+            "file:///home/demifnt/.config/polybar/config"
+        ]
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -39,6 +43,34 @@
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
                                     "label": "&&Reopen Closed Editor"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/demifnt/Downloads",
+                                        "path": "/home/demifnt/Downloads",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/demifnt/.config/polybar/config",
+                                        "path": "/home/demifnt/.config/polybar/config",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/polybar/config"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -342,8 +374,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -527,8 +558,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -537,8 +567,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1361,18 +1390,20 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#1e1e1e",
+    "themeBackground": "#0e1f1d",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/1570309845221",
+            "folder": "file:///home/demifnt/Downloads",
+            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/6811b282b0f02ee54e5f02dafea3b631",
             "uiState": {
                 "mode": 1,
                 "x": 21,
-                "y": 49,
+                "y": 55,
                 "width": 1878,
-                "height": 1010
+                "height": 1004
             }
         },
         "openedWindows": []
-    }
+    },
+    "pickerWorkingDir": "/home/demifnt"
 }

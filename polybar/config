@@ -47,7 +47,7 @@ widget = #bacfd6
 widget2 = #43484d
 wlan = #ffff91 
 volume = #ffb300
-battery = #00e897 
+battery = #00d489 
 rambar = #eb8adc
 time = #ff295b
 
@@ -59,7 +59,7 @@ time = #ff295b
 
 [bar/mainbar-bspwm]
 width = 100%
-height = 24
+height = 20
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -80,8 +80,8 @@ enable-ipc = true
 
 border-left-size = 0
 border-right-size = 0
-border-top-size = 6
-border-bottom-size = 6
+border-top-size = 7
+border-bottom-size = 7
 border-color = #1e2022
 
 padding-left = 2

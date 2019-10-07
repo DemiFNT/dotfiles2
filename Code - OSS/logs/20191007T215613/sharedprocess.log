@@ -1,0 +1,8 @@
+[2019-10-07 21:56:17.449] [sharedprocess] [info] main {"machineId":"775de81d00b466d768a3aef5ca2ceab5ac4550e40375f29e969420dac598b356"}
+[2019-10-07 21:56:22.643] [sharedprocess] [info] Installing extension: dlasagno.wal-theme
+[2019-10-07 21:56:22.941] [sharedprocess] [info] Downloaded extension: dlasagno.wal-theme /tmp/aca575ac-ff00-4375-a685-4e5d40d82f11
+[2019-10-07 21:56:23.108] [sharedprocess] [info] Extracted extension to /home/demifnt/.vscode-oss/extensions/.dlasagno.wal-theme-1.0.3: dlasagno.wal-theme
+[2019-10-07 21:56:23.108] [sharedprocess] [info] Renamed to /home/demifnt/.vscode-oss/extensions/dlasagno.wal-theme-1.0.3
+[2019-10-07 21:56:23.109] [sharedprocess] [info] Installation completed. dlasagno.wal-theme
+[2019-10-07 21:56:23.118] [sharedprocess] [info] Extensions installed successfully: dlasagno.wal-theme
+[2019-10-07 21:56:57.449] [sharedprocess] [info] Starting to clean up unused language packs.
