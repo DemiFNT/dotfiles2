@@ -2,6 +2,7 @@
     "telemetry.machineId": "775de81d00b466d768a3aef5ca2ceab5ac4550e40375f29e969420dac598b356",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/demifnt/.config/polybar",
             "file:///home/demifnt/Downloads"
         ],
         "files2": [
@@ -46,6 +47,18 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "fsPath": "/home/demifnt/.config/polybar",
+                                        "external": "file:///home/demifnt/.config/polybar",
+                                        "path": "/home/demifnt/.config/polybar",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/polybar"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -184,8 +197,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder",
-                        "enabled": false
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -374,12 +386,12 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
-                                    "label": "Show S&&tatus Bar",
-                                    "checked": true
+                                    "label": "Show S&&tatus Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleActivityBarVisibility",
@@ -567,7 +579,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1393,17 +1406,17 @@
     "themeBackground": "#0e1f1d",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/demifnt/Downloads",
-            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/6811b282b0f02ee54e5f02dafea3b631",
+            "folder": "file:///home/demifnt/.config/polybar",
+            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/1ad671153c5eaccfc7746de1e747fa8b",
             "uiState": {
                 "mode": 1,
                 "x": 21,
-                "y": 55,
+                "y": 21,
                 "width": 1878,
-                "height": 1004
+                "height": 1038
             }
         },
         "openedWindows": []
     },
-    "pickerWorkingDir": "/home/demifnt"
+    "pickerWorkingDir": "/home/demifnt/.config"
 }

@@ -98,7 +98,7 @@ font-3 = Iosevka Nerd Font:style=Medium:size=11;3
 font-4 = Font Awesome 5 Free:style=Solid:size=9;3
 
 modules-left = cpu3 memory3 
-modules-center = bspwm2
+modules-center = 
 modules-right = wlan4 battery4 volume4 arch-aur-updates3 time3
 
 tray-detached = falsetray-offset-x = 0

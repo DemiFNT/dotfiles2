@@ -1,0 +1,86 @@
+conky.config = {
+own_window = true,
+own_window_type = 'override',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+own_window_colour = '#000000',
+own_window_class = 'Conky',
+own_window_title = 'sidebar Conky',
+
+minimum_width = 400, 
+minimum_height = 1100,
+maximum_width = 5000,
+
+gap_x = 0,--## left | right
+gap_y = -22,--## up | down
+
+
+use_xft = true,
+font = 'iosevka:size=10',
+
+override_utf8_locale = true,
+
+uppercase = false,
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+default_color = '#F7F7F1',-- light
+color1 = '#2f343f',-- dark
+color2 = '#bf616a',-- Red
+color3 = '#a3be8c',-- Green
+color4 = '#ebcb8b',-- Yellow
+color5 = '#81a1c1',-- Blue
+
+draw_borders = false,
+stippled_borders = 0,
+border_inner_margin = 0,
+border_outer_margin = 0,
+border_width = 0,
+draw_graph_borders = true,--no
+background = true,
+use_spacer = 'none',
+no_buffers = true,
+short_units = true,
+pad_percents = 2,
+imlib_cache_size = 0,
+double_buffer = true,
+update_interval = 1,
+
+};
+
+conky.text = [[
+
+#${image ~/.config/custom/linebit/bg-light.png -p 0,0}
+#${voffset 0}
+
+${voffset 0}${offset 1685}${font iosevka:size=50}${time %H:%M}
+
+${voffset -130}${offset 1725}${font iosevka:size=11}${time %a %-d %B}
+
+${image ~/.config/custom/linebit/ram.png -p 1675,198 -s 50x50}
+${voffset 20}${offset 1750}${font iosevka:Bold:size=12}RAM
+${voffset 0}${offset 1750}${font iosevka:size=11}$mem / $memmax
+
+${image ~/.config/custom/linebit/cpu.png -p 1675, 276 -s 50x50}
+${voffset -3}${offset 1750}${font iosevka:Bold:size=12}CPU
+${voffset 0}${offset 1750}${font iosevka:size=11}${cpu cpu0}%
+
+${image ~/.config/custom/linebit/temperature.png -p 1675,353 -s 50x50}
+${voffset -3}${offset 1750}${font iosevka:Bold:size=12}Temperature
+${voffset 0}${offset 1750}${font iosevka:size=11}${hwmon temp 1}°C
+
+${image ~/.config/custom/linebit/battery.png -p 1677,426 -s 50x50}
+${voffset -8}${offset 1750}${font iosevka:Bold:size=12}Battery
+${voffset 0}${offset 1750}${font iosevka:size=11}${battery_percent}%
+
+${image ~/.config/custom/linebit/wifi.png -p 1683,510 -s 38x40}
+${voffset -3}${offset 1750}${font iosevka:Bold:size=12}Wifi
+${voffset 0}${offset 1750}${font iosevka:size=11}${wireless_essid wlp3s0}
+
+#${image ~/.config/custom/linebit/volume.png -p 1680,584 -s 38x40}
+#${voffset -3}${offset 1750}${font iosevka:Bold:size=11}Volume
+#${voffset 0}${offset 1750}${font iosevka:size=10}${exec amixer -c 0 get Master | grep Mono: | awk -F'[][]' '{print $2}' }
+]];

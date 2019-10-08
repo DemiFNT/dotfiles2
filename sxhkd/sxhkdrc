@@ -98,11 +98,13 @@ super + alt + ctrl + {Left,Down,Up,Right}
 
 # volume control keys
 XF86AudioMute
-    pamixer -t
+    ~/.config/dunst/volume.sh mute
+#XF86AudioRaiseVolume
+#    pamixer -i 4
 XF86AudioRaiseVolume
-    pamixer -i 4
+    ~/.config/dunst/volume.sh up
 XF86AudioLowerVolume
-    pamixer -d 4
+    ~/.config/dunst/volume.sh down
 XF86MonBrightnessUp
     xbacklight +2
 XF86MonBrightnessDown

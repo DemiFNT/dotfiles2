@@ -1,0 +1,28 @@
+[2019-10-08 22:00:27.136] [exthost] [info] extension host started
+[2019-10-08 22:00:27.146] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.146] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/debug-auto-launch/dist/extension
+[2019-10-08 22:00:27.151] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.151] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/emmet/dist/extension
+[2019-10-08 22:00:27.198] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.198] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/git/dist/main
+[2019-10-08 22:00:27.297] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.297] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/merge-conflict/dist/extension
+[2019-10-08 22:00:27.303] [exthost] [info] ExtensionService#_doActivateExtension dlasagno.wal-theme {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.303] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/demifnt/.vscode-oss/extensions/dlasagno.wal-theme-1.0.3/out/extension.js
+[2019-10-08 22:00:27.320] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:27.320] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/demifnt/.vscode-oss/extensions/pkief.material-icon-theme-3.9.1/dist/extension
+[2019-10-08 22:00:27.337] [exthost] [info] eager extensions activated
+[2019-10-08 22:00:37.847] [exthost] [info] extension host started
+[2019-10-08 22:00:37.852] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:37.852] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/debug-auto-launch/dist/extension
+[2019-10-08 22:00:37.855] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:37.856] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/emmet/dist/extension
+[2019-10-08 22:00:37.902] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:37.902] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/git/dist/main
+[2019-10-08 22:00:37.999] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:37.999] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/merge-conflict/dist/extension
+[2019-10-08 22:00:38.004] [exthost] [info] ExtensionService#_doActivateExtension dlasagno.wal-theme {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:38.004] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/demifnt/.vscode-oss/extensions/dlasagno.wal-theme-1.0.3/out/extension.js
+[2019-10-08 22:00:38.016] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-10-08 22:00:38.016] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/demifnt/.vscode-oss/extensions/pkief.material-icon-theme-3.9.1/dist/extension
+[2019-10-08 22:00:38.033] [exthost] [info] eager extensions activated
