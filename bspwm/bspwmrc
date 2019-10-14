@@ -10,29 +10,29 @@ sxhkd &
 nitrogen --restore &
 
 # launch compton
-# al-compositor --start &
+al-compositor --start &
 
 # xfce settings
 xfsettingsd &
 
 # status bar
-    conky -b &
+conky -b &
 
 # panel
 # polybar mainbar-bspwm &
 
 # Set some bsp specific stuff
-bspc monitor -d I II III IV
+bspc monitor -d I II III IV V
 
-bspc config border_width 3
+bspc config border_width 0
 bspc config window_gap 18
-bspc config top_padding 0 #34
+bspc config top_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
 
 #bspc config normal_border_color "#484848"
-bspc config focused_border_color "#535e59"
+#bspc config focused_border_color "#535e59"
 
 bspc config split_ratio 0.54
 bspc config borderless_monocle false
@@ -46,3 +46,6 @@ bspc config pointer_action3 resize_corner
 bspc config click_to_focus true
 
 bspc rule -a Conky sticky=on managed=off border=off
+
+# Battery Notifications
+while true; do ~/.config/dunst/battery_notif.sh; sleep 600; done

@@ -59,12 +59,12 @@ time = #ff295b
 
 [bar/mainbar-bspwm]
 width = 100%
-height = 20
+height = 22
 offset-x = 0
 offset-y = 0
 radius = 0.0
 fixed-center = true
-bottom = false
+bottom = true
 separator = 
 
 background = ${colors.background-panel}
@@ -80,8 +80,8 @@ enable-ipc = true
 
 border-left-size = 0
 border-right-size = 0
-border-top-size = 7
-border-bottom-size = 7
+border-top-size = 6
+border-bottom-size = 6
 border-color = #1e2022
 
 padding-left = 2
@@ -97,9 +97,9 @@ font-2 = Iosevka Nerd Font:style=Medium:size=13;3
 font-3 = Iosevka Nerd Font:style=Medium:size=11;3
 font-4 = Font Awesome 5 Free:style=Solid:size=9;3
 
-modules-left = cpu3 memory3 
+modules-left = 
 modules-center = 
-modules-right = wlan4 battery4 volume4 arch-aur-updates3 time3
+modules-right = battery4 time3
 
 tray-detached = falsetray-offset-x = 0
 tray-offset-y = 0
@@ -132,9 +132,9 @@ format = <label-state>
 label-focused = %icon%
 label-occupied = %icon%
 label-empty = %icon%
-label-focused-font = 2
-label-occupied-font = 2
-label-empty-font = 2
+label-focused-font = 4
+label-occupied-font = 4
+label-empty-font = 4
 
 label-occupied-padding = 2
 label-empty-padding = 2
@@ -196,12 +196,12 @@ content-background = ${colors.background-panel}
 type = custom/text
 content = "%{T3} %{T-}"
 content-foreground = ${colors.arrow1} 
-content-background = ${colors.background-panel}
+content-background = ${colors.arrow0}
 
 [module/arrow2]
 type = custom/text
 content = "%{T3}%{T-}"
-content-foreground = ${colors.arrow2}
+content-foreground = ${colors.background-panel}
 content-background = ${colors.arrow1}
 
 [module/arrow3]
@@ -478,7 +478,7 @@ type = internal/date
 interval = 5
 time = "%H:%M"
 format-foreground = ${colors.foreground}
-format-background = ${colors.arrow5}
+format-background = ${colors.background-panel}
 label = " %time%  "
 format-prefix = " "
 format-prefix-font = 1
@@ -902,14 +902,14 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected-prefix = "  %{A1:networkmanager_dmenu:} %{A}"
-format-connected-prefix-foreground = ${colors.wlan}
-format-connected-prefix-background = ${colors.widget2}
-format-connected-prefix-font = 5
-label-connected = " %signal%%  "
-format-connected-foreground = ${colors.foreground}
+format-connected = "  %{A1:networkmanager_dmenu:} %{A} "
+format-connected-foreground = ${colors.wlan}
 format-connected-background = ${colors.widget2}
-label-connected-font = 1
+format-connected-font = 5
+;label-connected =
+;format-connected-foreground = ${colors.foreground}
+;format-connected-background = ${colors.widget2}
+;label-connected-font = 1
 
 format-disconnected-prefix = "  %{A1:networkmanager_dmenu:}ﮊ%{A} "
 label-disconnected = " %{A1:networkmanager_dmenu:}disconnected%{A}  "

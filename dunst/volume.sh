@@ -17,9 +17,9 @@ function send_notification {
     volume=`get_volume`
     # Make the bar with the special character ─ (it's not dash -)
     # https://en.wikipedia.org/wiki/Box-drawing_character
-    bar=$(seq -s "─" $(($volume*200/260)) | sed 's/[0-9]//g')
+    bar=$(seq -s "─" $(($volume*200/270)) | sed 's/[0-9]//g')
     # Send the notification
-    dunstify -i audio-volume-muted-blocking -t 1000 -r 2593 -u normal "    $bar"
+    dunstify -i audio-volume-muted-blocking -t 1000 -r 2593 -u normal "     $bar"
 }
 
 case $1 in
@@ -39,7 +39,7 @@ case $1 in
     	# Toggle mute
 	amixer -D pulse set Master 1+ toggle > /dev/null
 	if is_mute ; then
-	    dunstify -i audio-volume-muted -t 1000 -r 2593 -u normal "婢    muted"
+	    dunstify -i audio-volume-muted -t 1000 -r 2593 -u normal " 婢    muted"
 	else
 	    send_notification
 	fi

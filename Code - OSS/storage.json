@@ -2,10 +2,12 @@
     "telemetry.machineId": "775de81d00b466d768a3aef5ca2ceab5ac4550e40375f29e969420dac598b356",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/demifnt/Desktop",
             "file:///home/demifnt/.config/polybar",
             "file:///home/demifnt/Downloads"
         ],
         "files2": [
+            "file:///home/demifnt/.conkyrc",
             "file:///home/demifnt/.config/polybar/config"
         ]
     },
@@ -52,7 +54,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/demifnt/.config/polybar",
+                                        "external": "file:///home/demifnt/Desktop",
+                                        "path": "/home/demifnt/Desktop",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/demifnt/.config/polybar",
                                         "path": "/home/demifnt/.config/polybar",
                                         "scheme": "file"
@@ -73,6 +85,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/demifnt/.conkyrc",
+                                        "path": "/home/demifnt/.conkyrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.conkyrc"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -197,7 +220,8 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
+                        "label": "Close &&Folder",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -386,8 +410,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -548,8 +571,7 @@
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Show &&Minimap",
-                        "checked": true
+                        "label": "Show &&Minimap"
                     },
                     {
                         "id": "breadcrumbs.toggle",
@@ -558,7 +580,8 @@
                     },
                     {
                         "id": "editor.action.toggleRenderWhitespace",
-                        "label": "&&Render Whitespace"
+                        "label": "&&Render Whitespace",
+                        "checked": true
                     },
                     {
                         "id": "editor.action.toggleRenderControlCharacter",
@@ -570,7 +593,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1403,20 +1427,19 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#0e1f1d",
+    "themeBackground": "#0f010b",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/demifnt/.config/polybar",
-            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/1ad671153c5eaccfc7746de1e747fa8b",
+            "backupPath": "/home/demifnt/.config/Code - OSS/Backups/1571001623626",
             "uiState": {
                 "mode": 1,
-                "x": 21,
-                "y": 21,
-                "width": 1878,
-                "height": 1038
+                "x": 18,
+                "y": 18,
+                "width": 1884,
+                "height": 1044
             }
         },
         "openedWindows": []
     },
-    "pickerWorkingDir": "/home/demifnt/.config"
+    "pickerWorkingDir": "/home/demifnt"
 }

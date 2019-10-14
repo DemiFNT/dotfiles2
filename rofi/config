@@ -2,3 +2,4 @@ rofi.drun-icon-theme: Tela-grey-dark
 rofi.show-icons: true
 rofi.click-to-exit: true
 rofi.font: iosevka 11
+rofi.bw: 0

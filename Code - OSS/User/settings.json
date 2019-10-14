@@ -3,5 +3,7 @@
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": true,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all"
 }
