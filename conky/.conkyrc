@@ -9,10 +9,10 @@ own_window_title = 'sidebar Conky',
 
 minimum_width = 400, 
 minimum_height = 1100,
-maximum_width = 5000,
+maximum_width = 600,
 
 gap_x = 0,--## left | right
-gap_y = -22,--## up | down
+gap_y = 0,--## up | down
 
 
 use_xft = true,
@@ -27,12 +27,13 @@ default_shade_color = 'black',
 draw_outline = false,-- amplifies text if yes
 default_outline_color = 'black',
 
-default_color = '#F7F7F1',-- light
+color0 = '#F7F7F1',-- light
 color1 = '#2f343f',-- dark
 color2 = '#bf616a',-- Red
 color3 = '#a3be8c',-- Green
 color4 = '#ebcb8b',-- Yellow
 color5 = '#81a1c1',-- Blue
+default_color = '#F7F7F1',
 
 draw_borders = false,
 stippled_borders = 0,
@@ -47,40 +48,50 @@ short_units = true,
 pad_percents = 2,
 imlib_cache_size = 0,
 double_buffer = true,
-update_interval = 1,
+update_interval = 2,
 
 };
 
 conky.text = [[
 
-#${image ~/.config/custom/linebit/bg-light.png -p 0,0}
+#${image ~/.config/custom/drops/bg-light.png -p 0,0}
 #${voffset 0}
 
-${voffset 0}${offset 1685}${font iosevka:size=50}${time %H:%M}
+${voffset 30}${offset 85}${font iosevka:size=56}${time %H:%M}
 
-${voffset -130}${offset 1725}${font iosevka:size=11}${time %a %-d %B}
+${voffset -150}${offset 132}${font iosevka:size=11}${time %a %-d %B}
 
-${image ~/.config/custom/linebit/ram.png -p 1675,198 -s 50x50}
-${voffset 20}${offset 1750}${font iosevka:Bold:size=12}RAM
-${voffset 0}${offset 1750}${font iosevka:size=11}$mem / $memmax
+${image ~/.config/custom/drops/ram.png -p 80,237 -s 50x50}
+${voffset 20}${offset 155}${font iosevka:Bold:size=12}RAM
+${voffset 0}${offset 155}${font iosevka:size=11}$mem / $memmax
 
-${image ~/.config/custom/linebit/cpu.png -p 1675, 276 -s 50x50}
-${voffset -3}${offset 1750}${font iosevka:Bold:size=12}CPU
-${voffset 0}${offset 1750}${font iosevka:size=11}${cpu cpu0}%
+${image ~/.config/custom/drops/cpu.png -p 80, 315 -s 50x50}
+${voffset -3}${offset 155}${font iosevka:Bold:size=12}CPU
+${voffset 0}${offset 155}${font iosevka:size=11}${cpu cpu0}%
 
-${image ~/.config/custom/linebit/temperature.png -p 1675,353 -s 50x50}
-${voffset -3}${offset 1750}${font iosevka:Bold:size=12}Temperature
-${voffset 0}${offset 1750}${font iosevka:size=11}${hwmon temp 1}°C
+${image ~/.config/custom/drops/temperature.png -p 80,391 -s 50x50}
+${voffset -3}${offset 155}${font iosevka:Bold:size=12}Temperature
+${voffset 0}${offset 155}${font iosevka:size=11}${hwmon temp 1}°C
 
-${image ~/.config/custom/linebit/battery.png -p 1677,426 -s 50x50}
-${voffset -8}${offset 1750}${font iosevka:Bold:size=12}Battery
-${voffset 0}${offset 1750}${font iosevka:size=11}${battery_percent}%
+${image ~/.config/custom/drops/battery.png -p 79,460 -s 50x50}
+${voffset -8}${offset 155}${font iosevka:Bold:size=12}Battery
+${voffset 0}${offset 155}${font iosevka:size=11}${battery_percent}%
 
-${image ~/.config/custom/linebit/wifi.png -p 1683,510 -s 38x40}
-${voffset -3}${offset 1750}${font iosevka:Bold:size=12}Wifi
-${voffset 0}${offset 1750}${font iosevka:size=11}${wireless_essid wlp3s0}
+${image ~/.config/custom/drops/wifi.png -p 87,543 -s 38x40}
+${voffset -3}${offset 155}${font iosevka:Bold:size=12}Wifi
+${voffset 0}${offset 155}${font iosevka:size=11}${wireless_essid wlp3s0}
 
-#${image ~/.config/custom/linebit/volume.png -p 1680,584 -s 38x40}
-#${voffset -3}${offset 1750}${font iosevka:Bold:size=11}Volume
-#${voffset 0}${offset 1750}${font iosevka:size=10}${exec amixer -c 0 get Master | grep Mono: | awk -F'[][]' '{print $2}' }
+#${image ~/.config/custom/drops/cloud.png -p 1614,631 -s 50x50}
+#${voffset -3}${offset 1720}${font iosevka:Bold:size=12}Up / Down
+#${voffset 0}${offset 1720}${font iosevka:size=11}$downspeed / $upspeed
+${image ~/.config/custom/drops/appearance.png -p 80,614 -s 50x50}
+${voffset -3}${offset 155}${font iosevka:Bold:size=12}Updates
+${voffset 0}${offset 155}${font iosevka:size=11}${execi 60 ~/.config/polybar/scripts/check-all-updates.sh}
+
+#${image ~/.config/custom/drops/volume.png -p 1660,681 -s 38x40}
+#${voffset -3}${offset 1730}${font iosevka:Bold:size=11}Volume
+#${voffset 0}${offset 1730}${font iosevka:size=10}${exec amixer -c 0 get Master | grep Mono: | awk -F'[][]' '{print $2}' }
+#${image ~/.config/custom/drops/quotation.png -p 89,695 -s 34x36}
+#${voffset -3}${offset 155}${font iosevka:Bold:size=12}Fortune
+#${voffset 0}${offset 155}${font iosevka:size=11}${execi 600 fortune -s}
 ]];
