@@ -1,0 +1,7 @@
+[2019-11-01 14:09:21.231] [sharedprocess] [info] main {"machineId":"775de81d00b466d768a3aef5ca2ceab5ac4550e40375f29e969420dac598b356","windowId":2}
+[2019-11-01 14:09:29.327] [sharedprocess] [info] Installing extension: dlasagno.wal-theme
+[2019-11-01 14:09:29.693] [sharedprocess] [info] Downloaded extension: dlasagno.wal-theme /tmp/d0a5d074-d004-4490-a476-6d307cd719e2
+[2019-11-01 14:09:29.849] [sharedprocess] [info] Extracted extension to /home/b/.vscode-oss/extensions/.dlasagno.wal-theme-1.0.3: dlasagno.wal-theme
+[2019-11-01 14:09:29.850] [sharedprocess] [info] Renamed to /home/b/.vscode-oss/extensions/dlasagno.wal-theme-1.0.3
+[2019-11-01 14:09:29.851] [sharedprocess] [info] Installation completed. dlasagno.wal-theme
+[2019-11-01 14:09:29.859] [sharedprocess] [info] Extensions installed successfully: dlasagno.wal-theme

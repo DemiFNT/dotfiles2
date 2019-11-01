@@ -1,0 +1,1040 @@
+################################################################################
+################################################################################
+############                  AUTHOR: XANGLIEV                      ############
+################################################################################
+################################################################################
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+format-foreground = #FF0000
+format-background = #00FF00
+
+[colors]
+
+### Broken Path Theme ###
+#background-panel = #1e2022 
+background-panel = #000000
+background = #37355c
+background-2 = #23434a
+#foreground = #ede4e4
+foreground-alt = #044a37
+foreground-alt2 = #c1cf06
+foreground-alt3 = #066355
+foreground-alt4 = #00ba8c
+volume-bar = #02baae
+indicator = #27bcd6
+arrow0 = #02b0a4
+arrow1 = #02968d
+arrow2 = #01857c
+arrow3 = #00736b
+arrow4 = #00615a
+arrow5 = #00524e
+cpubar = #f78da8
+#arch = #51b9f5
+#widget = #bacfd6
+#widget2 = #43484d
+#wlan = #ffff91 
+#volume = #ffb300
+#battery = #00d489 
+#rambar = #eb8adc
+#time = #ff295b
+
+#new theme
+arch = #1ec6e3
+widget = #bacfd6
+widget2 = #000000
+wlan = #1ec6e3
+volume = #18b3f5
+volume-empty = #0f94ab
+battery = #1ec6e3
+rambar = #1ec6e3
+time = #1ec6e3
+foreground = #1ec6e3
+
+################################################################################
+################################################################################
+############                  MAINBAR-BSPWM                         ############
+################################################################################
+################################################################################
+
+[bar/mainbar-bspwm]
+width = 100%
+height = 40
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+bottom = false
+separator = 
+
+background = ${colors.background-panel}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00000000
+
+wm-restack = bspwm
+override-redirect = true
+
+enable-ipc = true
+
+border-left-size = 0
+border-right-size = 0
+border-top-size = 0
+border-bottom-size = 1
+border-color = ${colors.foreground}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = Iosevka Nerd Font:style=Regular:size=9;3
+#font-0 = Typicons:style=Regular:size=9;3
+font-1 = Iosevka Nerd Font:style=Medium:size=10;3
+font-2 = Iosevka Nerd Font:style=Medium:size=13;3
+font-3 = Iosevka Nerd Font:style=Regular:size=11;3
+font-4 = Font Awesome 5 Free:style=Solid:size=9;3
+
+modules-left = bspwm2
+modules-center = 
+modules-right = wlan4 volume2 battery4 arch-aur-updates3 time3
+
+tray-detached = falsetray-offset-x = 0
+tray-offset-y = 0
+tray-position = right
+tray-padding = 2
+tray-maxsize = 20
+tray-scale = 1.0
+tray-background = ${colors.background-panel}
+
+################################################################################
+################################################################################
+############                       MODULE BSPWM                     ############
+################################################################################
+################################################################################
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;ﳟ
+
+format = <label-state>
+label-focused = %icon%
+label-occupied = %icon%
+label-empty = %icon%
+label-focused-font = 4
+label-occupied-font = 4
+label-empty-font = 4
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-focused-padding = 2
+
+label-focused-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.foreground}
+label-occupied-foreground = ${colors.foreground}
+
+label-focused-background = ${colors.indicator}
+label-empty-background = ${colors.background-panel}
+label-occupied-background = ${colors.background-panel}
+
+[module/bspwm2]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;ﳟ
+
+format = <label-state>
+label-focused = %icon%
+label-occupied = %icon%
+label-empty = %icon%
+label-focused-font = 1
+label-occupied-font = 1
+label-empty-font = 1
+label-focused-overline = ${colors.indicator}
+
+label-occupied-padding = 3
+label-empty-padding = 3
+label-focused-padding = 3
+
+label-focused-foreground = ${colors.indicator}
+label-empty-foreground = ${colors.indicator}
+label-occupied-foreground = ${colors.indicator}
+
+label-focused-background = ${colors.widget2}
+label-empty-background = ${colors.widget2}
+label-occupied-background = ${colors.widget2}
+
+################################################################################
+############                       MODULES ARROWS                   ############
+################################################################################
+################################################################################
+
+[module/arrow0]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow0}
+content-background = ${colors.background-panel}
+
+[module/arrow1]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow1} 
+content-background = ${colors.arrow0}
+
+[module/arrow2]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground = ${colors.background-panel}
+content-background = ${colors.arrow1}
+
+[module/arrow3]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow3}
+content-background = ${colors.arrow2}
+
+[module/arrow4]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow4}
+content-background = ${colors.arrow3}
+
+[module/arrow5]
+type = custom/text
+content = "%{T3} %{T-}"
+content-foreground = ${colors.arrow5}
+content-background = ${colors.arrow4}
+
+################################################################################
+################################################################################
+############                       MODULES ADD-ONS                  ############
+################################################################################
+################################################################################
+
+[module/backlight-acpi]
+type = internal/backlight
+card = intel_backlight
+
+format = <ramp><label>
+label = "%percentage%%"
+label-foreground = ${colors.foreground}
+label-background = ${colors.arrow2}
+
+ramp-0 = "  "
+ramp-1 = "  "
+ramp-2 = "  "
+ramp-0-foreground = ${colors.foreground}
+ramp-0-background = ${colors.arrow2}
+ramp-1-foreground = ${colors.foreground}
+ramp-1-background = ${colors.arrow2}
+ramp-2-foreground = ${colors.foreground}
+ramp-2-background = ${colors.arrow2}
+
+################################################################################
+
+[module/battery]
+;https://github.com/jaagr/polybar/wiki/Module:-battery
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging> <label-charging>
+label-charging = "%percentage%%"
+label-charging-foreground = ${colors.foreground}
+format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.arrow1}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = "%percentage%%"
+label-discharging-foreground = ${colors.foreground}
+format-discharging-foreground = ${colors.foreground} 
+format-discharging-background = ${colors.arrow1}
+
+format-full-prefix =   <label-full>
+format-full-prefix-foreground = ${colors.foreground}
+label-full-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.arrow1}
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-font = 3
+
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+[module/battery2]
+;https://github.com/jaagr/polybar/wiki/Module:-battery
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging> <label-charging>
+label-charging = "%percentage%%"
+label-charging-foreground = ${colors.foreground}
+format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.arrow2}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = "%percentage%%"
+label-discharging-foreground = ${colors.foreground}
+format-discharging-foreground = ${colors.foreground} 
+format-discharging-background = ${colors.arrow2}
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-5 = " "
+ramp-capacity-6 = " "
+ramp-capacity-7 = " "
+ramp-capacity-8 = " "
+ramp-capacity-9 = " "
+ramp-capacity-foreground = ${colors.foreground}
+ramp-capacity-font = 1
+
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 1000
+animation-charing-font = 1
+
+[module/battery3]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging><label-charging>
+label-charging = "  %percentage%%  "
+label-charging-foreground = ${colors.background-panel}
+label-charging-background = ${colors.widget}
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = "  %percentage%%  "
+label-discharging-foreground = ${colors.background-panel}
+label-discharging-background = ${colors.widget}
+
+ramp-capacity-0 = "    "
+ramp-capacity-1 = "    "
+ramp-capacity-2 = "    "
+ramp-capacity-3 = "    "
+ramp-capacity-4 = "    "
+ramp-capacity-5 = "    "
+ramp-capacity-6 = "    "
+ramp-capacity-7 = "    "
+ramp-capacity-8 = "    "
+ramp-capacity-9 = "    "
+ramp-capacity-foreground = ${colors.background-panel}
+ramp-capacity-background = ${colors.battery}
+ramp-capacity-font = 1
+
+animation-charging-0 = "    "
+animation-charging-1 = "    "
+animation-charging-2 = "    "
+animation-charging-3 = "    "
+animation-charging-4 = "    "
+animation-charging-foreground = ${colors.background-panel}
+animation-charging-background = ${colors.battery}
+animation-charging-framerate = 1000
+animation-charing-font = 1
+
+[module/battery4]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging><label-charging>
+label-charging = " %percentage%% "
+label-charging-foreground = ${colors.foreground}
+label-charging-background = ${colors.widget2}
+format-charing-underline = ${colors.battery}
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = " %percentage%% "
+label-discharging-foreground = ${colors.foreground}
+label-discharging-background = ${colors.widget2}
+format-discharging-underline= ${colors.battery}
+
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
+ramp-capacity-5 = "  "
+ramp-capacity-6 = "  "
+ramp-capacity-7 = "  "
+ramp-capacity-8 = "  "
+ramp-capacity-9 = "  "
+ramp-capacity-foreground = ${colors.battery}
+ramp-capacity-background = ${colors.widget2}
+ramp-capacity-font = 1
+
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-3 = "  "
+animation-charging-4 = "  "
+animation-charging-foreground = ${colors.battery}
+animation-charging-background = ${colors.widget2}
+animation-charging-framerate = 1000
+animation-charing-font = 1
+
+################################################################################
+
+[module/cpu]
+;https://github.com/jaagr/polybar/wiki/Module:-cpu
+type = internal/cpu
+interval = 1
+
+format = <label><bar-load>
+label = " "
+format-foreground = ${colors.background}
+format-background = ${colors.arrow0} 
+
+bar-load-indicator =
+bar-load-width = 6
+bar-load-foreground-0 = ${colors.cpubar}
+bar-load-foreground-1 = ${colors.cpubar}
+bar-load-foreground-2 = ${colors.cpubar}
+bar-load-foreground-3 = ${colors.cpubar}
+bar-load-background-0 = ${colors.widget}
+bar-load-background-1 = ${colors.widget}
+bar-load-background-2 = ${colors.widget}
+bar-load-background-3 = ${colors.widget}
+bar-load-fill = ▍
+bar-load-empty = ▍
+bar-load-empty-foreground = ${colors.background}
+
+[module/cpu2]
+type = internal/cpu
+interval = 1
+
+format-prefix = "    "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.cpubar}
+format-prefix-font = 5
+label = "  %percentage:%%  "
+label-foreground = ${colors.background}
+label-background = ${colors.widget}
+
+[module/cpu3]
+type = internal/cpu
+interval = 1
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.cpubar}
+format-prefix-background = ${colors.widget2}
+format-prefix-font = 5
+label = " %percentage:%%  "
+label-foreground = ${colors.foreground}
+label-background = ${colors.widget2}
+
+################################################################################
+
+[module/date]
+type = internal/date
+interval = 5
+date = " %B %e - %A"
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background-panel}
+label = "%date% "
+
+[module/time]
+type = internal/date
+interval = 5
+time = "%H:%M"
+format-foreground = ${colors.foreground}
+format-background = ${colors.background-panel}
+label = " %time%  "
+format-prefix = " "
+format-prefix-font = 1
+format-prefix-foreground = ${colors.foreground}
+
+[module/time2]
+type = internal/date
+interval = 5
+time = "%H:%M"
+label-foreground = ${colors.background-panel}
+label-background = ${colors.widget}
+label = "  %time%  "
+format-prefix = "    "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.background-panel}
+format-prefix-background = ${colors.time}
+
+[module/time3]
+type = internal/date
+interval = 5
+time = "%H:%M"
+label-foreground = ${colors.foreground}
+label-background = ${colors.widget2}
+label-underline = ${colors.time}
+label = "%time% "
+format-prefix = "  "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.time}
+format-prefix-background = ${colors.widget2}
+format-prefix-underline = ${colors.time}
+
+
+################################################################################
+
+[module/memory]
+type = internal/memory
+interval = 5
+format = <label><bar-used>
+label = " "
+format-foreground = ${colors.foreground}
+format-background = ${colors.arrow1}
+
+bar-used-indicator =
+bar-used-width = 6
+bar-used-foreground-0 = ${colors.rambar}
+bar-used-foreground-1 = ${colors.rambar}
+bar-used-foreground-2 = ${colors.rambar}
+bar-used-foreground-3 = ${colors.rambar}
+bar-used-fill = ▍
+bar-used-empty = ▍
+bar-used-empty-foreground = ${colors.foreground}
+
+[module/memory2]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+
+format-prefix = "    "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.rambar}
+format-prefix-font = 5
+label = "  %percentage_used:1%%  "
+label-foreground = ${colors.background}
+label-background = ${colors.widget} 
+
+[module/memory3]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+
+format-prefix = "    "
+format-prefix-foreground = ${colors.rambar}
+format-prefix-background = ${colors.widget2}
+format-prefix-font = 5
+label = "%percentage_used:1%%  "
+label-foreground = ${colors.foreground}
+label-background = ${colors.widget2} 
+
+################################################################################
+
+[module/mpd]
+;https://github.com/jaagr/polybar/wiki/Module:-mpd
+type = internal/mpd
+;format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+format-online =  "<label-song>  <bar-progress>"
+;format-online =  "<label-song>  <bar-progress> <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song-maxlen = 40
+label-song-ellipsis = true
+bar-progress-width = 10
+bar-progress-indicator = 
+bar-progress-fill = 
+bar-progress-empty = 
+bar-progress-fill-foreground = #ff0
+bar-progress-fill-background = ${colors.background}
+bar-progress-indicator-foreground = ${colors.foreground}
+format-online-foreground = ${colors.foreground}
+format-online-background = ${colors.background}
+
+################################################################################
+
+[module/networkspeedup]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp3s0
+;interface = enp14s0
+;interface = enp0s31f6
+;interface = enp3s0
+label-connected = "%upspeed:7% "
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.background}
+format-connected-foreground = ${colors.background}
+format-connected-background = ${colors.arrow0}
+
+[module/networkspeedup2]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp3s0
+label-connected = "%upspeed:7%"
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.arrow1}
+format-connected-prefix-background = ${colors.background-panel}
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background-panel}
+
+################################################################################
+
+[module/networkspeeddown]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp3s0
+;interface = enp14s0
+;interface = enp0s31f6
+;interface = enp3s0
+label-connected = "%downspeed:7% "
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.background}
+format-connected-foreground = ${colors.background}
+format-connected-background = ${colors.arrow0}
+
+[module/networkspeeddown2]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = wlp3s0
+label-connected = "%downspeed:7%"
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.arrow1}
+format-connected-prefix-background = ${colors.background-panel}
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background-panel}
+
+################################################################################
+
+[module/volume]
+type = internal/alsa
+
+format-volume =<ramp-volume><label-volume>
+label-volume = "%percentage%%"
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.arrow3}
+label-muted = "  muted"
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.arrow3}
+
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+
+ramp-volume-0-foreground = ${colors.foreground}
+ramp-volume-0-background = ${colors.arrow3}
+ramp-volume-1-foreground = ${colors.foreground}
+ramp-volume-1-background = ${colors.arrow3}
+ramp-volume-2-foreground = ${colors.foreground}
+ramp-volume-2-background = ${colors.arrow3}
+
+[module/volume2]
+type = internal/pulseaudio
+
+format-volume =<label-volume><bar-volume>
+label-volume = " "
+label-volume-font = 5
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.widget2}
+
+format-muted-prefix = "婢 "
+format-muted-prefix-font = 5
+format-muted-prefix-foreground = ${colors.foreground}
+format-muted-prefix-background = ${colors.widget2}
+label-muted = "sound muted" 
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.widget2}
+
+bar-volume-width = 13
+bar-volume-gradient = false
+bar-volume-indicator = ━
+bar-volume-indicator-foreground = #ffffff
+
+bar-volume-fill = ━ 
+bar-volume-foreground-0 = ${colors.volume}
+bar-volume-foreground-1 = ${colors.volume}
+bar-volume-foreground-2 = ${colors.volume}
+bar-volume-foreground-3 = ${colors.volume}
+bar-volume-foreground-4 = ${colors.volume}
+bar-volume-foreground-5 = ${colors.volume}
+bar-volume-foreground-6 = ${colors.volume}
+bar-volume-foreground-7 = ${colors.volume}
+bar-volume-foreground-8 = ${colors.volume}
+bar-volume-foreground-9 = ${colors.volume}
+
+#bar-volume-fill-font = 2
+
+bar-volume-empty = ━
+bar-volume-empty-foreground = ${colors.volume-empty}
+bar-volume-empty-background = ${colors.widget2}
+
+[module/volume3]
+type = internal/alsa
+format-volume =<ramp-volume><label-volume>
+label-volume = "  %percentage%%  "
+label-volume-foreground = ${colors.background-panel}
+label-volume-background = ${colors.widget}
+format-muted-prefix = "  婢  "
+format-muted-prefix-foreground = ${colors.background-panel}
+format-muted-prefix-background = ${colors.volume}
+format-muted-prefix-font = 5
+label-muted = "  0%  "
+label-muted-foreground = ${colors.background-panel}
+label-muted-background = ${colors.widget}
+
+ramp-volume-0 = "    "
+ramp-volume-1 = "    "
+ramp-volume-2 = "    "
+ramp-volume-3 = "    "
+ramp-volume-4 = "    "
+ramp-volume-5 = "    "
+ramp-volume-6 = "    "
+ramp-volume-font = 5
+
+ramp-volume-0-foreground = ${colors.background-panel}
+ramp-volume-0-background = ${colors.volume}
+ramp-volume-1-foreground = ${colors.background-panel}
+ramp-volume-1-background = ${colors.volume}
+ramp-volume-2-foreground = ${colors.background-panel}
+ramp-volume-2-background = ${colors.volume}
+ramp-volume-3-foreground = ${colors.background-panel}
+ramp-volume-3-background = ${colors.volume}
+ramp-volume-4-foreground = ${colors.background-panel}
+ramp-volume-4-background = ${colors.volume}
+ramp-volume-5-foreground = ${colors.background-panel}
+ramp-volume-5-background = ${colors.volume}
+ramp-volume-6-foreground = ${colors.background-panel}
+ramp-volume-6-background = ${colors.volume}
+
+[module/volume4]
+type = internal/pulseaudio
+format-volume =<ramp-volume><label-volume>
+label-volume = "%percentage%%"
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.widget2}
+format-muted-prefix = "婢"
+format-muted-prefix-foreground = ${colors.volume}
+format-muted-prefix-background = ${colors.widget2}
+format-muted-prefix-font = 5
+label-muted = " 0%"
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.widget2}
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+ramp-volume-3 = " "
+ramp-volume-4 = " "
+ramp-volume-5 = " "
+ramp-volume-6 = " "
+ramp-volume-font = 5
+
+ramp-volume-0-foreground = ${colors.volume}
+ramp-volume-0-background = ${colors.widget2}
+ramp-volume-1-foreground = ${colors.volume}
+ramp-volume-1-background = ${colors.widget2}
+ramp-volume-2-foreground = ${colors.volume}
+ramp-volume-2-background = ${colors.widget2}
+ramp-volume-3-foreground = ${colors.volume}
+ramp-volume-3-background = ${colors.widget2}
+ramp-volume-4-foreground = ${colors.volume}
+ramp-volume-4-background = ${colors.widget2}
+ramp-volume-5-foreground = ${colors.volume}
+ramp-volume-5-background = ${colors.widget2}
+ramp-volume-6-foreground = ${colors.volume}
+ramp-volume-6-background = ${colors.widget2}
+
+################################################################################
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 70
+
+format = <ramp><label>
+format-warn = <ramp><label-warn>
+
+label = "%temperature% "
+label-foreground = ${colors.foreground}
+label-background = ${colors.arrow1}
+label-warn = "%temperature% "
+label-warn-foreground = ${colors.foreground}
+label-warn-background = #eb3449
+
+ramp-0 = "  "
+ramp-1 = "  "
+ramp-2 = "  "
+ramp-3 = "  "
+ramp-4 = "  "
+
+ramp-1-foreground = ${colors.foreground}
+ramp-2-foreground = ${colors.foreground}
+ramp-3-foreground = ${colors.foreground}
+ramp-4-foreground = ${colors.foreground}
+ramp-1-background = ${colors.arrow1}
+ramp-2-background = ${colors.arrow1}
+ramp-3-background = ${colors.arrow1}
+ramp-4-background = ${colors.arrow1}
+
+################################################################################
+
+[module/wired-network]
+type = internal/network
+interface = enp4s0
+;interface = enp14s0
+interval = 3.0
+
+label-connected =  %ifname%
+label-disconnected = %ifname% disconnected
+
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = #55aa55
+format-connected-prefix-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = " %{A1:networkmanager_dmenu:} %signal%%%{A}"
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.arrow0} 
+
+format-disconnected = <label-disconnected>
+label-disconnected = " %{A1:networkmanager_dmenu:}ﮊ disconnected%{A}"
+format-disconnected-foreground = ${colors.foreground}
+format-disconnected-background = ${colors.arrow0}
+
+[module/wlan2]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+label-connected = " %{A1:networkmanager_dmenu:} %{A}"
+;label-connected = "%signal%%"
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.arrow1}
+;format-connected-foreground = ${colors.foreground}
+;format-connected-background = ${colors.arrow1} 
+label-connected-font = 1
+
+format-disconnected-prefix = " %{A1:networkmanager_dmenu:}ﮊ%{A}"
+label-disconnected = " %{A1:networkmanager_dmenu:}disconnected%{A} "
+format-disconnected-prefix-foreground = ${colors.foreground}
+format-disconnected-prefix-background = ${colors.arrow1}
+format-disconnected-prefix-font = 1
+format-disconnected-foreground = ${colors.foreground}
+format-disconnected-background = ${colors.arrow1}
+
+[module/wlan3]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = "  %{A1:networkmanager_dmenu:} %{A} "
+format-connected-prefix-foreground = ${colors.background-panel}
+format-connected-prefix-background = ${colors.wlan}
+format-connected-prefix-font = 5
+label-connected = "  %signal%%  "
+format-connected-foreground = ${colors.background-panel}
+format-connected-background = ${colors.widget}
+label-connected-font = 1
+
+format-disconnected-prefix = "  %{A1:networkmanager_dmenu:}ﮊ%{A}  "
+label-disconnected = "  %{A1:networkmanager_dmenu:}disconnected%{A}  "
+format-disconnected-prefix-foreground = ${colors.background-panel}
+format-disconnected-prefix-background = ${colors.wlan}
+format-disconnected-prefix-font = 5
+format-disconnected-foreground = ${colors.background-panel}
+format-disconnected-background = ${colors.widget}
+
+[module/wlan4]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = " %{A1:networkmanager_dmenu:}%{A} "
+label-connected = "%essid% "
+format-connected-prefix-foreground = ${colors.wlan}
+format-connected-prefix-background = ${colors.widget2}
+format-connected-prefix-underline = ${colors.wlan}
+format-connected-foreground = ${colors.wlan}
+format-connected-background = ${colors.widget2}
+format-connected-underline = ${colors.wlan}
+format-connected-prefix-font = 5
+
+format-disconnected-prefix = " %{A1:networkmanager_dmenu:}ﮊ%{A}"
+format-disconnected = "%{A1:networkmanager_dmenu:} disconnected%{A} "
+format-disconnected-prefix-foreground = ${colors.wlan}
+format-disconnected-prefix-background = ${colors.widget2}
+format-disconnected-prefix-underline = ${colors.wlan}
+format-disconnected-prefix-font = 5
+format-disconnected-foreground = ${colors.foreground}
+format-disconnected-background = ${colors.widget2}
+format-disconnected-underline = ${colors.wlan}
+
+################################################################################
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.foreground}
+label-open-background = ${colors.background}
+label-close = 
+;label-separator = |
+;label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = 
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-background = ${colors.background}
+menu-0-0-exec = bspc quit
+menu-0-1 = 
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-background = ${colors.background}
+menu-0-1-exec = reboot
+menu-0-2 = 
+menu-0-2-foreground = ${colors.foreground}
+menu-0-2-background = ${colors.background}
+menu-0-2-exec = shutdown now
+
+################################################################################
+
+[module/arch-aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 600
+label = "%output%"
+format-prefix = "  "
+format-prefix-font = 1
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.arrow4}
+format-foreground = ${colors.foreground}
+format-background = ${colors.arrow4}
+
+[module/arch-aur-updates2]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 600
+label = "  %output%  "
+format-prefix = "    "
+format-prefix-font = 2
+format-prefix-foreground = ${colors.background-panel}
+format-prefix-background = ${colors.arch}
+format-foreground = ${colors.background-panel}
+format-background = ${colors.widget}
+label-font = 1
+
+[module/arch-aur-updates3]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 600
+label = "%output% "
+format-prefix = "  "
+format-prefix-font = 2
+format-prefix-foreground = ${colors.arch}
+format-prefix-background = ${colors.widget2}
+format-prefix-underline = ${colors.arch}
+format-foreground = ${colors.foreground}
+format-background = ${colors.widget2}
+format-underline = ${colors.arch}
+label-font = 1
+
+################################################################################
+
+[module/xkeyboard]
+;https://github.com/jaagr/polybar/wiki/Module:-xkeyboard
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.background}
+format-prefix-underline = #3ecfb2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+label-layout = %layout%
+label-layout-underline = #3ecfb2
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.background}
+label-indicator-underline = ${colors.foreground}
+
+################################################################################
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title%
+label-maxlen = 50
+
+format-prefix = "  "
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+###############################################################################
+# vim:ft=dosini
+
