@@ -109,6 +109,7 @@ font-1 = Iosevka Nerd Font:style=Medium:size=10;3
 font-2 = Iosevka Nerd Font:style=Medium:size=13;3
 font-3 = Iosevka Nerd Font:style=Regular:size=11;3
 font-4 = Font Awesome 5 Free:style=Solid:size=9;3
+font-5 = Font Awesome 5 Free:style=Solid:size=11;3
 
 modules-left = bspwm2
 modules-center = 
@@ -415,7 +416,7 @@ ramp-capacity-8 = "  "
 ramp-capacity-9 = "  "
 ramp-capacity-foreground = ${colors.battery}
 ramp-capacity-background = ${colors.widget2}
-ramp-capacity-font = 1
+ramp-capacity-font = 2
 
 animation-charging-0 = "  "
 animation-charging-1 = "  "
@@ -425,7 +426,7 @@ animation-charging-4 = "  "
 animation-charging-foreground = ${colors.battery}
 animation-charging-background = ${colors.widget2}
 animation-charging-framerate = 1000
-animation-charing-font = 1
+animation-charing-font = 2
 
 ################################################################################
 
@@ -521,7 +522,7 @@ label-background = ${colors.widget2}
 label-underline = ${colors.time}
 label = "%time% "
 format-prefix = "  "
-format-prefix-font = 5
+format-prefix-font = 2
 format-prefix-foreground = ${colors.time}
 format-prefix-background = ${colors.widget2}
 format-prefix-underline = ${colors.time}
@@ -677,7 +678,7 @@ ramp-volume-2-foreground = ${colors.foreground}
 ramp-volume-2-background = ${colors.arrow3}
 
 [module/volume2]
-type = internal/pulseaudio
+type = internal/alsa
 
 format-volume =<label-volume><bar-volume>
 label-volume = " "
@@ -686,7 +687,7 @@ format-volume-foreground = ${colors.foreground}
 format-volume-background = ${colors.widget2}
 
 format-muted-prefix = "婢 "
-format-muted-prefix-font = 5
+format-muted-prefix-font = 6
 format-muted-prefix-foreground = ${colors.foreground}
 format-muted-prefix-background = ${colors.widget2}
 label-muted = "sound muted" 

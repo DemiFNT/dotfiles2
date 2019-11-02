@@ -91,9 +91,9 @@ super + alt + ctrl + {Left,Down,Up,Right}
 XF86AudioMute
     amixer -D pulse set Master 1+ toggle > /dev/null
 XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +4%
+    amixer -D pulse set Master on > /dev/null; amixer -D pulse sset Master 8%+ > /dev/null
 XF86AudioLowerVolume
-    pactl set-sink-volume 0 -4%
+    amixer -D pulse set Master on > /dev/null; amixer -D pulse sset Master 8%- > /dev/null
 #XF86AudioRaiseVolume
 #    ~/.config/dunst/volume.sh up
 #XF86AudioLowerVolume
@@ -101,6 +101,6 @@ XF86AudioLowerVolume
 #XF86AudioMute
 #    ~/.config/dunst/volume.sh mute
 XF86MonBrightnessUp
-    echo 
+    xbacklight +4
 XF86MonBrightnessDown
     xbacklight -4
